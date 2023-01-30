@@ -1,0 +1,42 @@
+{
+    "Subscriptions": {
+        "name": "Subscriptions",
+        "nextId": 4,
+        "rows": {
+            "1": {
+                "name": "Subscriptions",
+                "Subscription_Type": "MUSIC",
+                "Subscription_Plan": "PERSONAL",
+                "Start_Date": "2022-02-19T18:30:00.000Z",
+                "id": 1
+            },
+            "2": {
+                "name": "Subscriptions",
+                "Subscription_Type": "VIDEO",
+                "Subscription_Plan": "PREMIUM",
+                "Start_Date": "2022-02-19T18:30:00.000Z",
+                "id": 2
+            },
+            "3": {
+                "name": "Subscriptions",
+                "Subscription_Type": "PODCAST",
+                "Subscription_Plan": "FREE",
+                "Start_Date": "2022-02-19T18:30:00.000Z",
+                "id": 3
+            }
+        }
+    },
+    "TopUps": {
+        "name": "TopUps",
+        "nextId": 2,
+        "rows": {
+            "1": {
+                "name": "TopUps",
+                "TopUp_Plan": "FOUR_DEVICE",
+                "Required_number_of_months": "3",
+                "Start_Date": "2022-02-19T18:30:00.000Z",
+                "id": 1
+            }
+        }
+    }
+}

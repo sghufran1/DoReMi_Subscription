@@ -1,0 +1,61 @@
+{
+  "name": "doremi",
+  "version": "1.0.0",
+  "description": "geektrust-project",
+  "main": "dist/geektrust.js",
+  "scripts": {
+    "install": "gulp build && gulp dev",
+    "start": "node ./dist/geektrust.js ./dist/Inputs/input1.txt",
+    "test": "nyc --report-dir ./reports/coverage-unit mocha --timeout 120000 --exit --reporter spec --require ts-node/register 'src/**/*.spec.ts'",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "Syed Ghufran",
+  "license": "ISC",
+  "nyc": {
+    "include": [
+      "src/helpers/*",
+      "src/storage/*",
+      "src/main_file/*"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "html",
+      "lcov"
+    ],
+    "check-coverage": true,
+    "lines": 80,
+    "all": true
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.36",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "lodash": "^4.17.21",
+    "mocha": "^10.0.0",
+    "moment": "^2.29.3",
+    "node-require": "^0.0.10",
+    "nyc": "^15.1.0",
+    "process": "^0.11.10",
+    "rewire": "^6.0.0",
+    "shelljs": "^0.8.5",
+    "sinon": "^14.0.0"
+  }
+}
